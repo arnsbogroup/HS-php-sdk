@@ -46,6 +46,6 @@ class Suppression
      */
     public function removeBounce(string $domain, string $email): array
     {
-        return $this->client->request('DELETE', "/api/suppressions/{$domain}/bounces/{$email}");
+        return $this->client->request('DELETE', "/api/suppressions/{$domain}/bounce/{$email}");
     }
 }

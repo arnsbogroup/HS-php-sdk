@@ -72,7 +72,11 @@ class HSClient
             $errorMessage = is_array($decoded) ? json_encode($decoded) : $response;
             throw new HSException("API Error ({$httpCode}): {$errorMessage}", $httpCode);
         }
-
+        if(!empty($decoded) && !is_array($decoded)) {
+            $decoded = [
+                'message' => $decoded
+            ];
+        }
         return $decoded ?? [];
     }
 
