@@ -8,7 +8,7 @@ class HSClient
 {
     private string $apiKey;
     private string $apiSecret;
-    private string $baseUrl = 'https://app.heysender.com';
+    private string $baseUrl;
     private array $lastResponse = [];
 
     /**
@@ -17,10 +17,11 @@ class HSClient
      * @param string $apiKey Your Heysender API key
      * @param string $apiSecret Your Heysender API secret
      */
-    public function __construct(string $apiKey, string $apiSecret)
+    public function __construct(string $apiKey, string $apiSecret, string $baseUrl = 'https://app.heysender.com')
     {
         $this->apiKey = $apiKey;
         $this->apiSecret = $apiSecret;
+        $this->baseUrl = $baseUrl;
     }
 
     /**
