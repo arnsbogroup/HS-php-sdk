@@ -30,6 +30,21 @@ class SmtpUser
     }
 
     /**
+     * Get a single SMTP user
+     *
+     * Note: unlike getSMTPUsers(), this response includes a nested 'domain'
+     * object, since the API eager-loads the related domain for this endpoint.
+     *
+     * @param int $domainId Domain ID
+     * @param int $userId SMTP user ID
+     * @return array SMTP user data
+     */
+    public function getSMTPUser(int $domainId, int $userId): array
+    {
+        return $this->client->request('GET', "/api/smtp/{$domainId}/{$userId}");
+    }
+
+    /**
      * Create SMTP user
      *
      * @param int $domainId Domain ID

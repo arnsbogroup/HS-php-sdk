@@ -1,7 +1,7 @@
 {
     "name": "heysender/heysender-api-sdk",
     "description": "Official PHP SDK for the Heysender API",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "type": "library",
     "keywords": ["heysender", "email", "api", "sdk"],
     "homepage": "https://github.com/arnsbogroup/HS-php-sdk",
