@@ -40,7 +40,7 @@ class HSClient
             'Authorization: Basic ' . base64_encode($this->apiKey . ':' . $this->apiSecret),
             'Content-Type: application/json',
             'Accept: application/json',
-            'User-Agent: HS-php-sdk/0.9'
+            'User-Agent: HS-php-sdk/0.9.1'
         ];
 
         $ch = curl_init();

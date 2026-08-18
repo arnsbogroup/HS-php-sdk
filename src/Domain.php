@@ -52,6 +52,17 @@ class Domain
     }
 
     /**
+     * Get a single domain by its URL
+     *
+     * @param string $domain Domain name
+     * @return array Domain data
+     */
+    public function getDomain(string $domain): array
+    {
+        return $this->client->request('GET', "/api/domains/{$domain}");
+    }
+
+    /**
      * Update domain with new DKIM key
      *
      * @param string $domain Domain name
